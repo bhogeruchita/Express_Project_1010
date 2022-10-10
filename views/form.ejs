@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering a web page using FAST API</title>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+<script src="https://kit.fontawesome.com/0ff6456f25.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Contact</th>
+    <th>Project</th>
+  </tr>
+    <% for(let i = 0 ; i < results.length ;i++){ %>
+        <tr>
+        <td class="border"><%= results[i].name%></td>
+        <td class="border"><%= results[i].contact%></td>
+        <td class="border"><%= results[i].project%></td>
+        </tr>
+        <%}%>
+</table>
+ <a href = "/subscribe">Link to Form</a>
+</body>
+</html>
